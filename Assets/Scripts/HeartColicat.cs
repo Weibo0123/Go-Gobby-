@@ -1,9 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HeartColicat : MonoBehaviour
 {
+    [SerializeField] private GameObject OnCollectEffect;
+    [SerializeField] private int healAmount = 1;
+
     public float RotationSpeed;
-    public GameObject OnCollectEffect;
+    
 
     // Update is called once per frame
     void Update()
@@ -18,12 +22,19 @@ public class HeartColicat : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            if (!other.CompareTag("Player")) return;
 
+            // 1) زوّد صحة اللاعب + رجّع UI
+            PlayerHealth ph = other.GetComponent<PlayerHealth>();
+            if (ph != null)
+                ph.Heal(healAmount);
+
+            // 2) اعمل الإيفكت
+            if (OnCollectEffect != null)
+                Instantiate(OnCollectEffect, transform.position, Quaternion.identity);
+
+            // 3) دمّر القلب اللي في الأرض
             Destroy(gameObject);
-
-            // Instantiate the particle effect
-            Instantiate(OnCollectEffect, transform.position, transform.rotation);
-
         }
 
     }

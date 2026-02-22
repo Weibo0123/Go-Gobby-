@@ -24,7 +24,23 @@ public class PlayerHealth : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    
+
+    public void Heal(int amount)
+    {
+        // لو مات/صفر، اختياري تمنع الشفاء
+        if (currentHealth <= 0) return;
+
+        int oldHealth = currentHealth;
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+
+        // فعّل القلوب اللي رجعت (من oldHealth لحد currentHealth-1)
+        for (int i = oldHealth; i < currentHealth; i++)
+        {
+            if (i >= 0 && i < hearts.Length)
+                hearts[i].SetActive(true);
+        }
+    }
+
     // Apply damage to player
     public void TakeDamage(int damage, Vector2 knockback)
     {
