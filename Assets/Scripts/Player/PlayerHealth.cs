@@ -1,12 +1,16 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     // Health parameters
-    [SerializeField] int maxHealth = 100;
+    [SerializeField] int maxHealth = 3;
     [SerializeField] float InvincibilityCooldown = 1f;
     [SerializeField] float knockbackDuration = 0.3f;
+
+    // ui 
+    [SerializeField] GameObject[] hearts;
 
     int currentHealth;
     bool isInvincible = false;
@@ -22,6 +26,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isInvincible) return;
         currentHealth -= damage;
+        if (currentHealth >= 0 && currentHealth < hearts.Length)
+        {
+            hearts[currentHealth].SetActive(false);
+        }
         if (currentHealth <= 0)
         {
             Die();
@@ -49,6 +57,10 @@ public class PlayerHealth : MonoBehaviour
     {
         // Handle player death (e.g., reload scene, show game over screen)
         Debug.Log("Player Died");
+    }
+    void OnDestroy()
+    {
+        Debug.Log($"{name} DESTROYED => {GetType().Name}");
     }
 }
 

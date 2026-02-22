@@ -248,4 +248,10 @@ public class PlayerController : MonoBehaviour
         if (groundCheck == null) return;                  // لو مفيش GroundCheck
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius); // ارسم دائرة الفحص في Scene
     }
+
+
+    void OnDestroy()
+    {
+        Debug.Log($"{name} DESTROYED => {GetType().Name}");
+    }
 }

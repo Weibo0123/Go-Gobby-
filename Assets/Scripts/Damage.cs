@@ -13,7 +13,7 @@ public class Damage : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;   
         PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-        if (playerHealth == null) return;
+        if (!playerHealth || !playerHealth.isActiveAndEnabled) return;
         Debug.Log("collided with " + other.name);
         // Apply knockback
         float knockbackDirection = other.transform.position.x < transform.position.x ? -1 : 1;
