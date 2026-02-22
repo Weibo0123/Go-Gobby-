@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 68da8967f77238b4abab6e14cfc17485
+guid: 79e30fb66bd07442289093e2d8f52e24
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3281886843189514476
-    second: Fireball_04_0
+      213: 11692873617873020
+    second: Chest_Open02_0
   - first:
-      213: -7038164367480573030
-    second: Fireball_04_1
+      213: 7205711563500423148
+    second: Chest_Open02_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,40 +99,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fireball_04_1
+      name: Chest_Open02_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 408
-        width: 752
-        height: 351
+        x: 333
+        y: 488
+        width: 1223
+        height: 1103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a93328d2cca635e90800000000000000
-      internalID: -7038164367480573030
+      spriteID: c78956a4b9a892000800000000000000
+      internalID: 11692873617873020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_Open02_1
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 1143
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce70e505d74dff360800000000000000
+      internalID: 7205711563500423148
       vertices: []
       indices: 
       edges: []
@@ -141,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 35e1085a3682a446a97a156d22d0cffd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -151,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fireball_04_0: -3281886843189514476
-      Fireball_04_1: -7038164367480573030
+      Chest_Open02_0: 11692873617873020
+      Chest_Open02_1: 7205711563500423148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

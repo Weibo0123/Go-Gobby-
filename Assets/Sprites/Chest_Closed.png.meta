@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 68da8967f77238b4abab6e14cfc17485
+guid: 7714a71f24d494ae091791d0af96ecbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3281886843189514476
-    second: Fireball_04_0
-  - first:
-      213: -7038164367480573030
-    second: Fireball_04_1
+      213: 786130205320796147
+    second: Chest_Closed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fireball_04_1
+      name: Chest_Closed_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 408
-        width: 752
-        height: 351
+        x: 453
+        y: 488
+        width: 1115
+        height: 982
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a93328d2cca635e90800000000000000
-      internalID: -7038164367480573030
+      spriteID: 3f7d953b145e8ea00800000000000000
+      internalID: 786130205320796147
       vertices: []
       indices: 
       edges: []
@@ -141,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 35e1085a3682a446a97a156d22d0cffd
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -151,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fireball_04_0: -3281886843189514476
-      Fireball_04_1: -7038164367480573030
+      Chest_Closed_0: 786130205320796147
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
