@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth = 3;
     [SerializeField] float InvincibilityCooldown = 1f;
     [SerializeField] float knockbackDuration = 0.3f;
+    // sound
+    private AudioSource audioSource;
 
     // ui 
     [SerializeField] GameObject[] hearts;
@@ -19,13 +21,16 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
+
     
     // Apply damage to player
     public void TakeDamage(int damage, Vector2 knockback)
     {
         if (isInvincible) return;
         currentHealth -= damage;
+        audioSource.Play();
         if (currentHealth >= 0 && currentHealth < hearts.Length)
         {
             hearts[currentHealth].SetActive(false);
@@ -57,6 +62,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Handle player death (e.g., reload scene, show game over screen)
         Debug.Log("Player Died");
+        SceneManager.LoadScene("GameOver");
+        
     }
     void OnDestroy()
     {
