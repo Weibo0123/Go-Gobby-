@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Win : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("You win!");
+            SceneManager.LoadScene("Win");
         }
     }
 }
